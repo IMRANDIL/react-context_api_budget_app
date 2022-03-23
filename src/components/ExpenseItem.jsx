@@ -18,7 +18,7 @@ const ExpenseItem = ({ id, name, cost }) => {
                     ${cost}
 
                 </span>
-                <TiDelete />
+                <TiDelete size='1.5em' />
 
             </div>
 
