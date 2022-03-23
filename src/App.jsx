@@ -1,6 +1,7 @@
 
 import React from 'react'
 import Budget from './components/Budget';
+import Remaining from './components/Remaining';
 
 
 
@@ -18,6 +19,7 @@ const App = () => {
         <div className="row mt-3">
           <div className="col-sm">
             <Budget />
+            <Remaining />
           </div>
         </div>
       </div>
