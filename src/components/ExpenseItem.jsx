@@ -14,10 +14,12 @@ const ExpenseItem = ({ id, name, cost }) => {
             {name}
 
             <div>
-                <span className='badge badge-primary badge-pill mr-3'>${cost}
-                    <TiDelete size='1.5em' />
+                <span className='badge bg-primary mx-5'>
+                    ${cost}
 
                 </span>
+                <TiDelete />
+
             </div>
 
 
