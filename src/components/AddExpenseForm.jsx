@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-
-
+import React, { useState, useContext } from 'react'
+import { v4 as uuidv4 } from 'uuid'
+import { AppContext } from '../context/AppContext';
 
 
 
@@ -13,12 +13,23 @@ const AddExpenseForm = () => {
     const [cost, setCost] = useState('')
 
 
+    const { dispatch } = useContext(AppContext)
 
 
     const handlesubmit = (e) => {
         e.preventDefault();
 
-        alert(`name ${name}, cost ${cost}`)
+        const expense = {
+            id: uuidv4(),
+            name: name,
+            cost: parseInt(cost)
+        }
+
+
+        dispatch({
+            type: 'ADD_EXPENSE',
+            payload: expense
+        })
     }
 
 
